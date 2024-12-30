@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.join-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 50px 0px 50px;
+  height: 75%;
+  overflow-y: scroll;
+}
+
+.form-container {
+  justify-content: flex-start;
+  width: 45%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* height: 650px; */
+  height: fit-content;
+}
+
+.form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #19283d;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* height: 500px; */
+  flex-wrap: wrap;
+}
+.form-container form > *{width: 100%;}
+
+.form-container label {
+  font-size: 16px;
+  color: #19283d;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container button {
+  font-size: 16px;
+  height: 45px;
+  padding: 10px;
+  border: 1px solid #19283d;
+  border-radius: 5px;
+}
+.form-container textarea{ height:fit-content !important; padding: 10px !important;}
+
+.form-container button {
+  background-color: #19283d;
+  color: white;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #145a9c;
+}
+
+.data-container {
+  justify-content: flex-end;
+  width: 45%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #19283d;
+}
+
+.data-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+li img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.join-container::-webkit-scrollbar {
+  display: block;
+  width: 12px;
+}
+
+.join-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.join-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+/* .data-container{background: transparent; box-shadow: none;} */
+
+#memberList li{ position: relative; width: 100%; border-radius: 10px; border: 2px solid #19283d; padding: 20px; line-height: 25px;}
+#memberList li strong{margin-bottom: 10px;}
+#memberList li strong:after{
+  content: ""; display: inline-block; width: 2px; height: 10px; 
+  background: #19283d; margin-left: 5px; 
+}
+#memberList li  button{
+  background: #19283d;
+  color: #fff;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  width: 50px;
+  position: absolute; bottom: 15px; right: 15px;
+}
+#memberList li  button:last-child{
+  right: 70px;
+}
+
+#memberList li  button:hover {
+  background: transparent;
+  border: 2px solid #19283d;
+  color: #19283d; cursor: pointer;
+}

@@ -1,0 +1,138 @@
+button:hover {
+  cursor: pointer;
+}
+
+#sendMsg {
+  border-top: 3px solid #19283d;
+  border-bottom: 3px solid #19283d;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+#sendMsg .inputForm {
+  display: flex;
+  align-items: center;
+}
+#sendMsg .inputForm label {
+  width: 100px;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+#sendMsg .inputForm input {
+  border: none;
+  width: calc(100% - 100px);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#sendMsg {
+  height: 0;
+  opacity: 0;
+  transition: height 1s ease-out, transform 1s ease-out;
+}
+#sendMsg.disBlock {
+  height: fit-content;
+  opacity: 1;
+}
+#sendMsg .flex-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+#sendMsg .flex-area .inputForm {
+  flex: 1;
+}
+.visitors .title {
+  color: #19283d;
+}
+.visitors button {
+  background: #19283d;
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+.visitors button:hover {
+  background: transparent;
+  border: 2px solid #19283d;
+  color: #19283d;
+}
+#commentList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-left: 15px;
+  align-items: stretch;
+}
+#commentList li {
+  list-style: none;
+  padding: 20px 10px;
+  position: relative;
+  border: 3px solid #19283d;
+  width: calc(100% / 3 - 15px);
+}
+
+#commentList li button {
+  position: absolute;
+  margin: 0;
+  top: 15px;
+  right: 10px;
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+}
+#commentList li p {
+  text-align: left;
+  color: #19283d;
+}
+#commentList li p.name {
+  font-weight: 600;
+}
+#commentList li p.memo {
+  width: 100%;
+  background: #19283d;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 14px;
+  position: relative;
+  color: #fff;
+  word-wrap: break-word;
+}
+#commentList li p.memo:after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 15px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #19283d transparent;
+}
+
+/**공통**/
+.visitors {
+  padding-right: 30px;
+  margin: 0 auto;
+  width: 90%;
+  height: 70%;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  display: block;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

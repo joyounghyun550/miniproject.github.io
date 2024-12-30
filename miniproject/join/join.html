@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join</title>
+    <link rel="stylesheet" href="./join.css" />
+    <link rel="stylesheet" href="../header/header.css" />
+  </head>
+  <body>
+    <div class="content" style="height: 100vh; margin: 0; padding: 40px">
+      <header class="header">
+        <ul>
+          <li>
+            <a href="../home/home.html">HOME</a>
+          </li>
+          <li>
+            <a href="../member/member.html">MEMBERS</a>
+          </li>
+          <li class="on">
+            <a href="../join/join.html">JOIN</a>
+          </li>
+          <li>
+            <a href="../visitors/visitors.html">VISITORS</a>
+          </li>
+        </ul>
+      </header>
+      <div class="header">
+        <h1>Team "Nice 2 Meet U"</h1>
+      </div>
+
+      <div class="join-container">
+        <div class="form-container">
+          <h1>우리팀 올래요❓</h1>
+          <form id="joinForm">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="age">나이:</label>
+            <input type="number" id="age" name="age" required />
+
+            <label for="style">협업 스타일:</label>
+            <textarea id="style" name="style" rows="3" placeholder="협업 스타일을 작성해주세요" required></textarea>
+
+            <label for="strength">장점:</label>
+            <textarea
+              id="strength"
+              name="strength"
+              rows="3"
+              placeholder="본인의 장점을 작성해주세요"
+              required
+            ></textarea>
+
+            <label for="mbti">MBTI:</label>
+            <input type="text" id="mbti" name="mbti" placeholder="MBTI를 입력해주세요 (예: INFP)" required />
+            <!-- 사진 업로드 -->
+            <label for="photo">사진 업로드:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required />
+
+            <button type="submit">등록</button>
+          </form>
+        </div>
+
+        <!-- 등록된 회원 목록 -->
+        <div class="data-container">
+          <h2>합류예정자❗️</h2>
+          <ul id="memberList"></ul>
+        </div>
+      </div>
+    </div>
+    <!-- 회원정보 입력 -->
+    <script src="./join.js"></script>
+  </body>
+</html>

@@ -1,0 +1,459 @@
+@charset 'utf-8';
+
+/* Main Text Style */
+@font-face {
+  font-family: "TTLaundryGothicB";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Sub Text Style */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.team_banner {
+  width: 600px;
+  height: 400px;
+  display: block;
+  margin: 50px auto 50px auto;
+}
+
+.content {
+  margin: 20px;
+  text-align: center;
+}
+.content-box h2 {
+  margin-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.title_content {
+  margin: 40px auto 0px auto;
+  font-family: "TTLaundryGothicB";
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.title {
+  margin: 40px auto 40px auto;
+  font-family: "TTLaundryGothicB";
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.team-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* ---- member 시작 ----*/
+
+.team-image {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.team-member {
+  background-color: rgb(111, 140, 160);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-member > h3 {
+  margin: 0;
+  padding-top: 30px;
+}
+
+.member {
+  width: 50%;
+}
+
+.comment {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* team 전체 감싸는 wrap */
+.wrap {
+  height: 100vh;
+  padding: 120px 80px;
+}
+
+.team-content {
+  font-family: "TTLaundryGothicB";
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+/* TeamTitle css Start */
+.team-title {
+  position: relative;
+  width: 500px;
+  padding-bottom: 30px;
+}
+
+.team-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.team-title::after {
+  width: 180px;
+  background: #0d0058;
+}
+
+.team-title::before,
+.team-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+
+#team-member p {
+  padding-top: 40px;
+  font-size: 20px;
+  line-height: 30px;
+}
+/* TeamTitle css End */
+.team-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 20vh;
+}
+
+.member {
+  display: inline-block;
+  margin: 20px;
+  width: 250px;
+  position: relative;
+}
+
+.photo {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.photo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+.photo:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.background_name {
+  font-family: "TTLaundryGothicB";
+  font-size: large;
+  font-weight: bold;
+  text-align: left;
+}
+
+.icons {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons a img {
+  height: 35px;
+  margin: 5px;
+  transition: transform 0.3s;
+}
+
+.icons a img:hover {
+  transform: scale(1.2);
+}
+
+/* ---- modal 시작 ----*/
+
+.modal_icon {
+  width: 80px;
+  height: 80px;
+  margin-right: 30px;
+}
+
+/* 모달 관련 스타일 */
+#modal_container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  overflow: auto;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.team_modal {
+  cursor: auto;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: #fefefe;
+  border-radius: 25px;
+  width: 40%; height: 80%;
+}
+
+.team_modal .closeBtn img {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#member_image {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+#member_image img {
+  width: 100%;
+  height: 100%;
+}
+
+.member_name {
+  float: left;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#member_name {
+  padding-top: 20px;
+  font-family: "TTLaundryGothicB";
+}
+
+#member_age {
+  padding-bottom: 30px;
+  font-size: 16px;
+}
+
+.mbti {
+  font-family: "TTLaundryGothicB";
+  font-size: large;
+  font-weight: bold;
+  text-align: left;
+}
+
+#member_content {
+  width: 100%;
+  font-size: 16px;
+}
+
+#member_content .content_inner {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  border-radius: 20px;
+  word-break: keep-all;
+}
+
+/* ---- modal End ---- */
+
+/********* ourTeam style Start *********/
+/* -------- title style Start ------- */
+.line-title {
+  position: relative;
+  width: 400px;
+  padding-bottom: 30px;
+}
+
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.line-title::after {
+  width: 60px;
+  background: #0d0058;
+}
+
+/* -------- title style End------- */
+/******* Middle section CSS Start ******/
+
+.card-section {
+  padding: 80px 80px;
+  height: 100vh;
+  background: #a6b5db;
+  color: white;
+}
+
+.card-section .custom_owl {
+  padding-top: 30px;
+}
+
+.card-section .owl-stage {
+  margin: 15px 0;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.card-section .card-subtitle {
+  padding-top: 40px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.card-section .item {
+  margin: 0 15px 60px;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  font-family: "TTLaundryGothicB";
+}
+
+.card-section .item.active {
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card-section .item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+.card-section .item-desc {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+
+.card-section .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+
+.card-section .item-desc h3 {
+  font-size: 30px;
+  font-family: "TTLaundryGothicB";
+}
+
+.card-section .item-desc p {
+  opacity: 0;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: "Pretendard-Regular";
+  padding-right: 0 !important;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.4s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+
+.card-section .item.active .item-desc p {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.card-section .owl-theme.custom-carousel .owl-dots {
+  margin-top: -20px !important;
+  position: relative;
+  z-index: 5;
+}
+
+/******** Middle section CSS End *******/
+/******** ourTeam style End ********/

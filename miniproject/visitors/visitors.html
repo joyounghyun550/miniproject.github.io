@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방명록</title>
+    <link rel="stylesheet" href="./../std/styles.css" />
+    <link rel="stylesheet" href="./../header/header.css" />
+    <link rel="stylesheet" href="./visitors.css" />
+    <script type="module" src="./visitorsFirebase.js"></script>
+  </head>
+  <body>
+    <div class="content" style="height: 100vh; margin: 0; padding: 40px">
+      <header class="header">
+        <ul>
+          <li>
+            <a href="./../home/home.html">HOME</a>
+          </li>
+          <li>
+            <a href="./../member/member.html">MEMBERS</a>
+          </li>
+          <li>
+            <a href="../join/join.html">JOIN</a>
+          </li>
+          <li class="on">
+            <a href="./../visitors/visitors.html">VISITORS</a>
+          </li>
+        </ul>
+      </header>
+      <div class="header">
+        <h1>Team "Nice 2 Meet U"</h1>
+      </div>
+      <div class="visitors">
+        <h2 class="title">2조에게 응원의 메세지를 남겨주세요!</h2>
+        <button id="openWrite">작성하기</button>
+<body>
+        <form onsubmit="gestForm()" name="send-msg" id="sendMsg">
+          <div class="flex-area">
+            <div class="inputForm">
+              <label for="userId">작성자</label>
+              <input type="text" name="name" id="userId" placeholder="이름" />
+            </div>
+            <div class="inputForm">
+              <label for="userPw">비밀번호</label>
+              <input
+                type="password"
+                name="pw"
+                id="userPw"
+                placeholder="비밀번호 입력"
+              />
+            </div>
+          </div>
+          <div class="inputForm">
+            <label for="msg">내용</label>
+            <input
+              type="text"
+              name="message"
+              id="msg"
+              placeholder="내용 입력"
+            />
+          </div>
+          <button type="submit">방명록 남기기</button>
+        </form>
+        <div class="comment-area">
+          <ul id="commentList"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
